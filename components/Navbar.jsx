@@ -64,7 +64,7 @@ const Navbar = () => {
         <section className='sticky top-0 z-50 bg-[#f5f5f5]'>
             <nav className='flex items-center justify-between md:px-8 px-3 py-4 md:py-5 shadow-md font-semibold lg:px-10'>
                 <Link href={"/"} className=''>
-                    <h1 className={`text-lg font-semibold text-[#233D4C] md:text-2xl ${font.className} antialiased`} alt='logo'>Case<span className='font-bold'>Vault</span></h1>
+                    <h1 className={`text-xl font-semibold text-[#233D4C] md:text-2xl ${font.className} antialiased`} alt='logo'>Case<span className='font-bold'>Vault</span></h1>
                 </Link>
                 <div className='gap-10 lg:flex hidden items-center'>
                     {
@@ -127,11 +127,11 @@ const Navbar = () => {
                                 <p className='text-xl'><FaRegUserCircle /></p>
                             </Link>
                     }
-                    <div className={`h-dvh bg-[#f5f5f5] lg:hidden w-full absolute top-0 left-0 flex-col items-center gap-10 pt-20  ${openNav ? "flex" : "hidden"} `}>
+                    <div className={`h-dvh bg-[#233D4C] lg:hidden w-full absolute top-0 left-0 flex-col items-center gap-10 pt-20  ${openNav ? "flex" : "hidden"} `}>
                         {
                             navLinks.map((item, i) => (
                                 <Link key={i} href={item.url} className='hover:text-[#55fff6] transition-colors 
-                                 duration-300  text-[#233D4C]'>{item.label}</Link>
+                                 duration-300  text-[#F5F5F5]'>{item.label}</Link>
                             ))
                         }
                     </div>
