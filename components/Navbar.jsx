@@ -62,7 +62,7 @@ const Navbar = () => {
 
     return (
         <section className='sticky top-0 z-50 bg-[#f5f5f5]'>
-            <nav className='flex items-center justify-between md:px-8 px-3 py-2 md:py-3 shadow-md font-semibold lg:px-10 lg:py-5'>
+            <nav className='flex items-center justify-between md:px-8 px-3 py-4 md:py-5 shadow-md font-semibold lg:px-10'>
                 <Link href={"/"} className=''>
                     <h1 className={`text-lg font-semibold text-[#233D4C] md:text-2xl ${font.className} antialiased`} alt='logo'>Case<span className='font-bold'>Vault</span></h1>
                 </Link>
