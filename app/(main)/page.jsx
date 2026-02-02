@@ -7,7 +7,7 @@ const page = () => {
             <section className="bg-[url('/tech.bg.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
                 <div className="bg-[#0F172A]/50 text-white min-h-dvh">
                     <div className="max-w-7xl mx-auto md:px-6 py-10 md:py-16 lg:py-24 text-center justify-center px-4">
-                        <h1 className="text-3xl md:text-6xl font-bold leading-tight mt-20">
+                        <h1 className="text-3xl md:text-6xl font-bold leading-tight mt-20 md:mt-10">
                             Organize, Share & Discover <br />
                             <span className="text-[#55fff6]">Real-World Cases</span>
                         </h1>
