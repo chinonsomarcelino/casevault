@@ -192,6 +192,7 @@ const Client = ({ session }) => {
                                                 [-webkit-box-orient:vertical]">
                                                 {caseItem.description}
                                             </p>
+                                            <p className='md:text-sm text-xs underline text-red-900'>Read more</p>
 
                                             <p className="text-xs font-semibold text-gray-400 mt-3 bottom-3 left-4 absolute">
                                                 {timeAgo(caseItem.createdAt)}
