@@ -124,7 +124,7 @@ const Navbar = () => {
                             </div>
                             :
                             <Link href={"/signin"} className='ml-10 flex items-center gap-1 duration-300 max-md:ml-auto text-[#f5f5f5] rounded-full md:px-6 md:py-2 bg-[#233D4C] hover:bg-[#F97316] hover:text-[#233D4C]'><p className='max-md:hidden'>Sign In</p>
-                                <p className='text-xl'><FaRegUserCircle /></p>
+                                <p className='text-2xl md:text-xl'><FaRegUserCircle /></p>
                             </Link>
                     }
                     <div className={`h-dvh bg-[#233D4C] lg:hidden w-full absolute top-0 left-0 flex-col items-center gap-10 pt-20  ${openNav ? "flex" : "hidden"} `}>
