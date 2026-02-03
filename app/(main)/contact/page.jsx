@@ -86,7 +86,7 @@ const page = async () => {
           </div>
         </div>
 
-        <div className="bg-[#233D4C] rounded-2xl shadow-lg p-8">
+        <div className="bg-[#233D4C] rounded-2xl shadow-lg md:p-8 p-4 max-md:w-full">
           <h2 className="text-2xl font-bold text-[#f5f5f5] mb-6">
             Send us a Message
           </h2>
@@ -95,24 +95,24 @@ const page = async () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full rounded-lg border border-[#f5f5f5] px-4 py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5]"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full rounded-lg border border-[#f5f5f5] px-4 py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5]"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <textarea
               rows="5"
               placeholder="Tell us how we can help..."
-              className="w-full rounded-lg border border-[#f5f5f5] px-4 py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5]"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <button
               type="submit"
-              className="w-full rounded-lg text-[#154B48] py-4 font-semibold bg-[#f5f5f5] transition-all duration-300 hover:bg-[#55fff6]/60 hover:text-[#f5f5f5]"
+              className="w-full rounded-lg text-[#154B48] py-2 md:py-4 font-semibold bg-[#f5f5f5] transition-all duration-300 hover:bg-[#55fff6]/60 hover:text-[#f5f5f5]"
             >
               Send Message
             </button>
