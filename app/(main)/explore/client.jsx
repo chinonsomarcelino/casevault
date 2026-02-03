@@ -11,6 +11,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import CircularProgress from '@mui/material/CircularProgress';
 import { LuLoaderCircle } from "react-icons/lu";
+import Link from 'next/link'
 
 
 const font = Patua_One({
@@ -50,6 +51,9 @@ const Client = ({ session }) => {
 
         fetchCases()
     }, [])
+
+    console.log(cases);
+    
 
     const timeAgo = (timestamp) => {
         if (!timestamp) return ""
@@ -114,6 +118,9 @@ const Client = ({ session }) => {
         setState({ ...state, open: false });
     };
 
+    
+    
+
 
     return (
         <main className="min-h-dvh bg-[#f5f5f5] bg-no-repeat bg-center bg-cover min-h-dvh">
@@ -154,6 +161,7 @@ const Client = ({ session }) => {
                         )}
                     </div>
 
+
                     {/* Case Cards */}
                     {
                         loading ?
@@ -192,7 +200,8 @@ const Client = ({ session }) => {
                                                 [-webkit-box-orient:vertical]">
                                                 {caseItem.description}
                                             </p>
-                                            <p className='md:text-sm text-xs underline text-red-500'>Read more</p>
+                                            <Link className='md:text-sm text-xs underline text-red-500' href={`/explore/${caseItem.id}`}>Read more
+                                            </Link>
 
                                             <p className="text-xs font-semibold text-gray-400 mt-3 bottom-3 left-4 absolute">
                                                 {timeAgo(caseItem.createdAt)}
@@ -217,6 +226,7 @@ const Client = ({ session }) => {
                                         </div>
                                     ))
                                 }
+                                
                             </div>
                     }
                     <Snackbar
