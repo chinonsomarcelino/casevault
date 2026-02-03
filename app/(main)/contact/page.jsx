@@ -95,19 +95,19 @@ const page = async () => {
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md:py-3 px-1 md:px-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md:py-3 px-1 md:px-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <textarea
               rows="5"
               placeholder="Tell us how we can help..."
-              className="w-full rounded-lg border border-[#f5f5f5] py-2 md;py-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
+              className="w-full rounded-lg border border-[#f5f5f5] py-2 md:py-3 px-1 md:px-3 focus:outline-none focus:ring-1 focus:ring-gray-700 placeholder-[#f5f5f5] max-md:placeholder-sm"
             />
 
             <button
