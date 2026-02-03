@@ -86,8 +86,8 @@ const page = async () => {
           </div>
         </div>
 
-        <div className="bg-[#233D4C] rounded-2xl shadow-lg md:p-8 p-4 max-md:w-full">
-          <h2 className="text-2xl font-bold text-[#f5f5f5] mb-6">
+        <div className="bg-[#233D4C] rounded-2xl shadow-lg md:p-8 p-3 max-md:w-full">
+          <h2 className="md:text-2xl font-bold text-[#f5f5f5] mb-6 text-xl">
             Send us a Message
           </h2>
 
