@@ -9,7 +9,7 @@ const page = async () => {
             <section className="bg-[url('/tech.bg.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
                 <div className="bg-[#0F172A]/50 text-white min-h-screen">
                     <div className="max-w-7xl mx-auto md:px-6 py-10 md:py-16 lg:py-24 text-center justify-center px-4">
-                        <h1 className="text-2xl lg:text-6xl font-bold leading-tight mt-20 md:mt-10 md:text-4xl">
+                        <h1 className="text-2xl lg:text-6xl font-bold leading-tight mt-20 md:mt-10 md:text-4xl sm:text-xl">
                             Organize, Share & Discover <br />
                             <span className="text-[#55fff6]">Real-World Cases</span>
                         </h1>
