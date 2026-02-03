@@ -202,7 +202,7 @@ const Client = ({ session }) => {
                                                 <button
                                                     onClick={() => handleDelete(caseItem.id)}
                                                     disabled={deletingId === caseItem.id}
-                                                    className="absolute top-3 right-3 text-red-500 hover:text-red-600 text-xl flex items-center justify-center"
+                                                    className="absolute top-3 right-3 text-red-600 hover:text-red-800 text-md flex items-center justify-center md:text-lg lg:text-xl"
                                                 >
                                                     {deletingId === caseItem.id ? (
                                                         <CircularProgress size={20} sx={{ color: "red" }} />
