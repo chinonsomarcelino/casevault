@@ -157,7 +157,7 @@ const Client = ({ session }) => {
                     {/* Case Cards */}
                     {
                         loading ?
-                            <span className='flex items-center justify-center gap-1 md:mt-20 mt-6'><LuLoaderCircle className='text-xl animate-spin text-center' /> <p>loading...</p> </span>
+                            <span className='flex items-center justify-center gap-1 md:mt-20 mt-10'><LuLoaderCircle className='text-xl animate-spin text-center' /> <p>loading...</p> </span>
                             :
                             <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3">
                                 {
@@ -192,7 +192,7 @@ const Client = ({ session }) => {
                                                 [-webkit-box-orient:vertical]">
                                                 {caseItem.description}
                                             </p>
-                                            <p className='md:text-sm text-xs underline text-red-900'>Read more</p>
+                                            <p className='md:text-sm text-xs underline text-red-500'>Read more</p>
 
                                             <p className="text-xs font-semibold text-gray-400 mt-3 bottom-3 left-4 absolute">
                                                 {timeAgo(caseItem.createdAt)}
