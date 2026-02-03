@@ -136,10 +136,10 @@ const Navbar = () => {
                         }
                     </div>
 
-                    <button onClick={() => { setOpenNav(!openNav) }} className='lg:hidden ml-3 text-xl text-[#f5f5f5] hover:text-[#55fff6] transition-colors 
+                    <button onClick={() => { setOpenNav(!openNav) }} className='lg:hidden ml-3 text-xl text-[#233D4C] hover:text-[#55fff6] transition-colors 
                      duration-300 z-50'>
                         {
-                            openNav ? <IoMdClose /> : <GiHamburgerMenu />
+                            openNav ? <p className='text-[#f5f5f5]'><IoMdClose /></p> : <p className=''><GiHamburgerMenu /></p>
                         }
                     </button>
                 </div>

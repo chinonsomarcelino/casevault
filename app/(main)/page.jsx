@@ -84,7 +84,7 @@ const page = async () => {
             <section className="bg-[url('/tech.bg.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
                 <main className='bg-[#0F172A]/50'>
                     <div className='text-white py-24 text-center '>
-                        <h2 className="text-2xl md:text-4xl font-bold">
+                        <h2 className="text-2xl md:text-4xl font-bold max-md:max-w-md">
                             Start Exploring Real Cases Today
                         </h2>
 
