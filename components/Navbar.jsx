@@ -37,10 +37,10 @@ const Navbar = () => {
             label: "Write Case",
             url: "/writecase",
         },
-        {
-            label: "My Vault",
-            url: "/resources",
-        },
+        //{
+           // label: "My Vault",
+            //url: "/resources",
+        //},
         {
             label: "Contact",
             url: "/contact",
