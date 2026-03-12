@@ -12,6 +12,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     ],
     pages: {
         signIn: "/signin",
+        signUp: "/signup",
     },
     adapter: FirestoreAdapter({
     credential: cert({

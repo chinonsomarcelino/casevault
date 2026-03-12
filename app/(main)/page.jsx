@@ -7,7 +7,7 @@ const page = async () => {
         <main className='max-md:text-sm md:text-base'>
             {/* HERO */}
             <section className="bg-[url('/tech.bg.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
-                <div className="bg-[#0F172A]/50 text-white min-h-screen">
+                <div className="bg-[#233D4C]/50 text-white min-h-screen">
                     <div className="max-w-7xl mx-auto md:px-6 py-10 md:py-16 lg:py-24 text-center justify-center px-4">
                         <h1 className="text-2xl lg:text-6xl font-bold leading-tight mt-20 md:mt-10 md:text-4xl sm:text-xl">
                             Organize, Share & Discover <br />
@@ -82,7 +82,7 @@ const page = async () => {
             </section>
             {/* CTA */}
             <section className="bg-[url('/tech.bg.jpg')] bg-no-repeat bg-center bg-cover bg-fixed">
-                <main className='bg-[#0F172A]/50'>
+                <main className='bg-[#233D4C]/50'>
                     <div className='text-white py-24 text-center '>
                         <h2 className="text-2xl md:text-4xl font-bold max-md:max-w-md">
                             Start Exploring Real Cases Today
@@ -148,7 +148,9 @@ const page = async () => {
                     </div>
                 </div>
             </section>
+            <section className="bg-[url('/725261188709c595aa25229b75675f53.jpg')] h-[100vh]">
 
+            </section>
         </main>
     )
 }
