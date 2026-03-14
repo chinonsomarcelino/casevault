@@ -53,7 +53,13 @@ const page = async () => {
 
                     <div>
                         <h2 className="font-semibold text-[#55fff6] mb-2">Status</h2>
-                        <p className="text-green-400">Active</p>
+                        {
+                            session ?
+                            <p className="text-green-400">Active</p>
+                            
+                            :
+                            <p className="text-red-400">Offline</p>
+                        }
                     </div>
 
                 </div>
