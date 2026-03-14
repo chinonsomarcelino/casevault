@@ -25,6 +25,12 @@ const Client = ({ session }) => {
 
     const [cases, setCases] = useState([])
     const [loading, setLoading] = useState(true)
+    const [searchTerm, setSearchTerm] = useState("")
+    const filteredCases = cases.filter((caseItem) =>
+        caseItem.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        caseItem.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        caseItem.category.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     useEffect(() => {
         const fetchCases = async () => {
@@ -53,7 +59,7 @@ const Client = ({ session }) => {
     }, [])
 
     console.log(cases);
-    
+
 
     const timeAgo = (timestamp) => {
         if (!timestamp) return ""
@@ -118,8 +124,8 @@ const Client = ({ session }) => {
         setState({ ...state, open: false });
     };
 
-    
-    
+
+
 
 
     return (
@@ -143,6 +149,8 @@ const Client = ({ session }) => {
                             type="text"
                             placeholder="Search cases..."
                             className="w-full md:w-1/2 border p-3 rounded-lg border-[#233D4C] text-[#233D4C]"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </div>
 
@@ -168,8 +176,10 @@ const Client = ({ session }) => {
                             <span className='flex items-center justify-center gap-1 md:mt-20 mt-10'><LuLoaderCircle className='text-xl animate-spin text-center' /> <p>loading...</p> </span>
                             :
                             <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3">
-                                {
-                                    cases.map(caseItem => (
+                                {   filteredCases.length === 0 ? (
+                                    <p className='text-gray-300 text-center col-span-full'>No result found for "{searchTerm}"</p>
+                                ) : (
+                                    filteredCases.map(caseItem => (
                                         <div key={caseItem.id} className="bg-[#233D4C] rounded-xl p-5 shadow-md relative pb-10">
                                             <div className='flex gap-5 items-center mb-5'>
                                                 <Avatar alt={caseItem.name} src={caseItem.image} sx={{
@@ -224,9 +234,9 @@ const Client = ({ session }) => {
 
 
                                         </div>
-                                    ))
+                                    )))
                                 }
-                                
+
                             </div>
                     }
                     <Snackbar
