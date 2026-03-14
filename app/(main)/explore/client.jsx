@@ -189,7 +189,7 @@ const Client = ({ session }) => {
                             :
                             <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3">
                                 {filteredCases.length === 0 ? (
-                                    <p className='text-gray-300 text-center col-span-full'>No result found for "{searchTerm}"</p>
+                                    <p className='text-gray-700 text-center col-span-full'>No result found for "{searchTerm}"</p>
                                 ) : (
                                     filteredCases.map(caseItem => (
                                         <div key={caseItem.id} className="bg-[#233D4C] rounded-xl p-5 shadow-md relative pb-10">
