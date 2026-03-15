@@ -226,7 +226,8 @@ const Page = ({ session }) => {
                                     <button
                                         //onClick={}
                                         //disabled={}
-                                        className=" text-red-500"
+                                        href={`/vault/${caseItem.id}`}
+                                        className=" text-[#f5f5f5]"
                                     >
                                         <MdModeEdit className="text-lg" />
 
