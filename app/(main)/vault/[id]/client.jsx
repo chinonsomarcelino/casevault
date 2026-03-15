@@ -6,7 +6,7 @@ import { doc, getDoc, updateDoc } from "firebase/firestore"
 import { LuLoaderCircle } from "react-icons/lu"
 import { Snackbar } from "@mui/material"
 
-const Client = ({ session }) => {
+const Client = () => {
   const { id } = useParams()
   const router = useRouter()
   const [sending, setSending] = useState(false)
@@ -90,10 +90,10 @@ const Client = ({ session }) => {
   }
 
 
-  if (loading) return (
+  if (loading) { return (
     <p className="text-center mt-20 min-h-dvh">Loading case...</p>
   )
-    
+} 
   return (
     <main className="min-h-dvh bg-[#f5f5f5] flex justify-center items-center p-6">
 
