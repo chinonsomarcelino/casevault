@@ -5,11 +5,8 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore"
 import { db } from "@/config/firebase"
 import { Avatar } from '@mui/material'
 import { Patua_One } from 'next/font/google'
-import { doc, deleteDoc } from "firebase/firestore";
-import { IoTrashOutline } from "react-icons/io5";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import CircularProgress from '@mui/material/CircularProgress';
 import { LuLoaderCircle } from "react-icons/lu";
 import Link from 'next/link'
 
@@ -98,28 +95,6 @@ const Client = ({ session }) => {
         if (months < 12) return `${months} month${months > 1 ? "s" : ""} ago`
         return `${years} year${years > 1 ? "s" : ""} ago`
     }
-
-    const handleDelete = async (id) => {
-        try {
-            setDeletingId(id); // start loader
-
-            await deleteDoc(doc(db, "cases", id));
-
-            setCases(prev => prev.filter(item => item.id !== id));
-
-            handleClick({ vertical: 'bottom', horizontal: 'center' });
-
-        } catch (error) {
-            console.error("An error occurred while deleting", error)
-            alert("Something went wrong")
-        } finally {
-            setDeletingId(null); // stop loader
-        }
-    }
-
-    const [deletingId, setDeletingId] = useState(null);
-
-
     const [state, setState] = React.useState({
         open: false,
         vertical: 'top',
@@ -134,9 +109,6 @@ const Client = ({ session }) => {
     const handleClose = () => {
         setState({ ...state, open: false });
     };
-
-
-
 
 
     return (
@@ -228,23 +200,6 @@ const Client = ({ session }) => {
                                             <p className="text-xs font-semibold text-gray-400 mt-3 bottom-3 left-4 absolute">
                                                 {timeAgo(caseItem.createdAt)}
                                             </p>
-
-
-                                            {caseItem.userId === uid && (
-                                                <button
-                                                    onClick={() => handleDelete(caseItem.id)}
-                                                    disabled={deletingId === caseItem.id}
-                                                    className="absolute top-3 right-3 text-red-600 hover:text-red-800 text-md flex items-center justify-center md:text-lg lg:text-xl"
-                                                >
-                                                    {deletingId === caseItem.id ? (
-                                                        <CircularProgress size={20} sx={{ color: "red" }} />
-                                                    ) : (
-                                                        <IoTrashOutline />
-                                                    )}
-                                                </button>
-                                            )}
-
-
                                         </div>
                                     )))
                                 }
